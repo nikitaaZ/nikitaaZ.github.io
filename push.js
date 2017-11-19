@@ -46,7 +46,6 @@ if (window.location.protocol === 'https:' &&
                     registration.showNotification(payload.notification.title, payload.notification);
                 }).catch(function(error) {
                     // registration failed :(
-                    showError('ServiceWorker registration failed.', error);
                 });
             }
         });
