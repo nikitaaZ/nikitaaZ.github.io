@@ -124,7 +124,6 @@ function sendNotification(notification) {
             });
         })
         .catch(function(error) {
-            showError('Error retrieving Instance ID token.', error);
         });
 }
 function sendTokenToServer(currentToken) {
