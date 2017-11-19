@@ -150,14 +150,3 @@ function setTokenSentToServer(currentToken) {
         window.localStorage.removeItem('sentFirebaseMessagingToken');
     }
 }
-
-function showError(error, error_data) {
-    if (typeof error_data !== "undefined") {
-        console.error(error + ' ', error_data);
-    } else {
-        console.error(error);
-    }
-
-    alert.show();
-    alert_message.html(error);
-}
