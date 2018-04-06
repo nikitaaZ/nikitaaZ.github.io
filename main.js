@@ -53,9 +53,10 @@ function Draw(posts){
         }
     }
     $('ul').html(html);
+    check();
 }
 function wordTest(p){
-    var trigger_words=["как","где","?"];
+    var trigger_words=["как","где","?","http"];
     for(var j=0;j<trigger_words.length;)
     {
          var k=p.text.toLowerCase().indexOf(trigger_words[j]);
@@ -68,3 +69,14 @@ function wordTest(p){
         }
     return true;
 }
+
+function check(){
+    let elements = document.querySelectorAll('li');
+    let elem = Array.prototype.slice.call(elements);
+    elem.forEach(function(item){
+        console.log(item);
+        if(item.innerText.indexOf("чисто"))
+	           item.classList.add("fo");
+    });
+}
+
